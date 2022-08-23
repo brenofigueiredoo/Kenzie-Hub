@@ -11,7 +11,8 @@ Uma aplicação web para armazenar "nome e status" da tecnologia que o usuário 
 
 - Styled-components;
 - Props através do estilo;
-- Typescript com react.
+- Typescript com react;
+- Requisição na API.
 
 ## Como acessar
 
