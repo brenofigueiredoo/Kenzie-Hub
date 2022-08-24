@@ -10,7 +10,7 @@ Kenzie hub é um sistema para que estudantes possam gerenciar e acompanhar tecno
 - [X] Mobile First;
 - [X] Feedback com notificações.
 
-## Tecnologias
+## Conceitos estudados
 
 - Styled-components;
 - React Toastify;
