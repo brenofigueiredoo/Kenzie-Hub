@@ -57,6 +57,7 @@ export const FormMainLogin = styled.form`
   p {
     color: white;
     font-size: 14px;
+    margin: 10px 0px;
   }
 
   .passwordVisible {

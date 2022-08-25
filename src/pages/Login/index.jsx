@@ -77,8 +77,8 @@ export function Login() {
                   />
                 </>
               )}
-              <p>{errors.password?.message}</p>
             </div>
+            <p>{errors.password?.message}</p>
           </ContainerPassword>
           <button type="submit">Entrar</button>
           <p>Ainda não possui conta ?</p>
