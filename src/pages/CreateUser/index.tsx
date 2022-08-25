@@ -49,35 +49,57 @@ export function CreateUser() {
       </Container>
       <FormMain onSubmit={handleSubmit(onCadastro)}>
         <h2>Crie sua conta</h2>
-        <input type="text" placeholder="Email" {...register("email")} />
-        <p>{errors.email?.message}</p>
-        <input type="password" placeholder="Senha" {...register("password")} />
-        <p>{errors.password?.message}</p>
-        <input type="text" placeholder="Nome" {...register("name")} />
-        <p>{errors.name?.message}</p>
-        <input type="text" placeholder="Bio" {...register("bio")} />
-        <p>{errors.bio?.message}</p>
-        <input
-          type="text"
-          placeholder="Opção de contato"
-          {...register("contact")}
-        />
-        <p>{errors.contact?.message}</p>
-        <Select {...register("course_module")}>
-          <option value="Primeiro módulo (Introdução ao Frontend)">
-            Primeiro módulo (Introdução ao Frontend)
-          </option>
-          <option value="Segundo módulo (Frontend Avançado)">
-            Segundo módulo (Frontend Avançado)
-          </option>
-          <option value="Terceiro módulo (Introdução ao Backend)">
-            Terceiro módulo (Introdução ao Backend)
-          </option>
-          <option value="Quarto módulo (Backend Avançado)">
-            Quarto módulo (Backend Avançado)
-          </option>
-        </Select>
-        <p>{errors.course_module?.message}</p>
+        <div>
+          <p>Email</p>
+          <input type="text" placeholder="Email" {...register("email")} />
+          <p>{errors.email?.message}</p>
+        </div>
+        <div>
+          <p>Senha</p>
+          <input
+            type="password"
+            placeholder="Senha"
+            {...register("password")}
+          />
+          <p>{errors.password?.message}</p>
+        </div>
+        <div>
+          <p>Nome</p>
+          <input type="text" placeholder="Nome" {...register("name")} />
+          <p>{errors.name?.message}</p>
+        </div>
+        <div>
+          <p>Bio</p>
+          <input type="text" placeholder="Bio" {...register("bio")} />
+          <p>{errors.bio?.message}</p>
+        </div>
+        <div>
+          <p>Opção de contato</p>
+          <input
+            type="text"
+            placeholder="Opção de contato"
+            {...register("contact")}
+          />
+          <p>{errors.contact?.message}</p>
+        </div>
+        <div>
+          <p>Módulo atual</p>
+          <Select {...register("course_module")}>
+            <option value="Primeiro módulo (Introdução ao Frontend)">
+              Primeiro módulo (Introdução ao Frontend)
+            </option>
+            <option value="Segundo módulo (Frontend Avançado)">
+              Segundo módulo (Frontend Avançado)
+            </option>
+            <option value="Terceiro módulo (Introdução ao Backend)">
+              Terceiro módulo (Introdução ao Backend)
+            </option>
+            <option value="Quarto módulo (Backend Avançado)">
+              Quarto módulo (Backend Avançado)
+            </option>
+          </Select>
+          <p>{errors.course_module?.message}</p>
+        </div>
 
         <button type="submit">Cadastrar</button>
       </FormMain>

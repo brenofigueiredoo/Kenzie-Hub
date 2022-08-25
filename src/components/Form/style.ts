@@ -4,16 +4,16 @@ export const FormMain = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
 
-  width: 100%;
-  height: 550px;
-  padding: 2px;
+  width: 266px;
+  height: 640px;
   background-color: #212529;
   border-radius: 5px;
 
   p {
     font-size: 12px;
+    margin: 6px 0px;
   }
 
   input {
@@ -32,24 +32,10 @@ export const FormMain = styled.form`
   button {
     border-radius: 5px;
     background-color: #ff577f;
-    height: 36px;
-    width: 220px;
+    height: 34.42px;
+    width: 226px;
     color: white;
     border: 1.2182px solid #ff577f;
-
-    cursor: pointer;
-  }
-
-  .LinkButton {
-    text-decoration: none;
-    border-radius: 5px;
-    background-color: #ff577f;
-    height: 36px;
-    width: 258px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     cursor: pointer;
   }

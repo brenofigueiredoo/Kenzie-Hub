@@ -28,8 +28,8 @@ export const FormMainLogin = styled.form`
   button {
     border-radius: 5px;
     background-color: #ff577f;
-    height: 36px;
-    width: 220px;
+    height: 34.43px;
+    width: 226px;
     color: white;
     border: 1.2182px solid #ff577f;
 
@@ -40,8 +40,8 @@ export const FormMainLogin = styled.form`
     text-decoration: none;
     border-radius: 5px;
     background-color: #868e96;
-    height: 36px;
-    width: 220px;
+    height: 34.43px;
+    width: 226px;
     color: white;
     display: flex;
     align-items: center;
