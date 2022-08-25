@@ -1,18 +1,26 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import ProtectedRoutes from "../components/ProtectedRoutes";
 import { CreateUser } from "../pages/CreateUser";
 import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 
 export function RoutersMain() {
+  const token = window.localStorage.getItem("authToken");
+
   return (
     <Routes>
       <Route path="/cadastrar" element={<CreateUser />} />
       <Route path="/login" element={<Login />} />
-      <Route element={<ProtectedRoutes />}>
-        <Route path="/home" element={<Home />} />
-      </Route>
-      <Route path="*" element={<Navigate to="/login" />} />
+      <Route path="/home" element={<Home />} />
+      <Route
+        path={"*"}
+        element={
+          token === null ? (
+            <Navigate to={"/login"} />
+          ) : (
+            <Navigate to={"/home"} />
+          )
+        }
+      />
     </Routes>
   );
 }

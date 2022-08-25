@@ -11,6 +11,7 @@ import { IoMdAdd } from "react-icons/io";
 import { FaTrashAlt } from "react-icons/fa";
 import ModalAddTechs from "../../components/ModalAddTech/index";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 export interface IModalAddTechsProps {
   setIsModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -74,43 +75,49 @@ export function Home() {
 
   return (
     <>
-      <Container>
-        <h1>Kenzie Hub</h1>
-        <LinkSair to={"/"} onClick={() => window.localStorage.clear()}>
-          Sair
-        </LinkSair>
-      </Container>
-      <ContainerMain>
-        <h2>Olá, {user && user.name}</h2>
-        <p>{user && user.course_module}</p>
-      </ContainerMain>
-      <ContainerTechs>
-        <div className="divTitleTech">
-          <h2>Tecnologias</h2>
-          <button onClick={() => setIsModal(!isModal)}>
-            <IoMdAdd size={18} />
-          </button>
-        </div>
-        {isModal && <ModalAddTechs setIsModal={setIsModal} />}
-        <section className="sectionList">
-          <DivUl className="divUl">
-            <ul>
-              {user &&
-                user.techs.map((elem, index) => (
-                  <li key={index} className="liTechs">
-                    <h2>{elem.title}</h2>
-                    <div className="divStatusAndButton">
-                      <h3>{elem.status}</h3>
-                      <button onClick={() => deleteTech(elem.id)}>
-                        <FaTrashAlt />
-                      </button>
-                    </div>
-                  </li>
-                ))}
-            </ul>
-          </DivUl>
-        </section>
-      </ContainerTechs>
+      <motion.div
+        initial={{ width: "0%" }}
+        animate={{ width: "100%" }}
+        exit={{ x: window.innerWidth, transition: { duration: 1 } }}
+      >
+        <Container>
+          <h1>Kenzie Hub</h1>
+          <LinkSair to={"/login"} onClick={() => window.localStorage.clear()}>
+            Sair
+          </LinkSair>
+        </Container>
+        <ContainerMain>
+          <h2>Olá, {user && user.name}</h2>
+          <p>{user && user.course_module}</p>
+        </ContainerMain>
+        <ContainerTechs>
+          <div className="divTitleTech">
+            <h2>Tecnologias</h2>
+            <button onClick={() => setIsModal(!isModal)}>
+              <IoMdAdd size={18} />
+            </button>
+          </div>
+          {isModal && <ModalAddTechs setIsModal={setIsModal} />}
+          <section className="sectionList">
+            <DivUl className="divUl">
+              <ul>
+                {user &&
+                  user.techs.map((elem, index) => (
+                    <li key={index} className="liTechs">
+                      <h2>{elem.title}</h2>
+                      <div className="divStatusAndButton">
+                        <h3>{elem.status}</h3>
+                        <button onClick={() => deleteTech(elem.id)}>
+                          <FaTrashAlt />
+                        </button>
+                      </div>
+                    </li>
+                  ))}
+              </ul>
+            </DivUl>
+          </section>
+        </ContainerTechs>
+      </motion.div>
     </>
   );
 }

@@ -27,12 +27,15 @@ export const Container = styled.div`
 
   h1 {
     color: #ff577f;
+    animation: backInLeft 0.5s;
+    animation-duration: 1s;
   }
 `;
 
 export const ContainerMain = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   border-bottom: 1px gray solid;

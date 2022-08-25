@@ -63,3 +63,34 @@ export const FormMainLogin = styled.form`
     position: absolute;
   }
 `;
+
+export const ContainerPassword = styled.div`
+  .conteiner-password {
+    display: flex;
+    flex-direction: row;
+    width: 226.43px;
+
+    margin-bottom: 15px;
+
+    input {
+      border-right: none;
+      border-radius: 0px;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    .password-icon {
+      border: 1px solid #f8f9fa;
+      border-left: none;
+      width: 8%;
+      height: 32.42px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      margin-bottom: 5px;
+      background-color: #343b41;
+      color: white;
+      padding-right: 8px;
+      cursor: pointer;
+    }
+  }
+`;
