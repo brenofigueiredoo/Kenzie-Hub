@@ -25,5 +25,5 @@ Kenzie hub é um sistema para que estudantes possam gerenciar e acompanhar tecno
 #### Entre no link abaixo
 
 ```
-kenzie-hub-gamma-three.vercel.app
+kenzie-hub-git-main-brenofigueiredoo.vercel.app
 ```
