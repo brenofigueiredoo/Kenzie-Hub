@@ -1,6 +1,6 @@
 ## Kenzie Hub
 
-Kenzie hub é um sistema para que estudantes possam gerenciar e acompanhar tecnologias aprendidas, sendo possível adicionar, editar e deletar tecnologias. Aplicação totalmente conectada com API, sendo possível se cadastrar e fazer login.
+Kenzie hub é um sistema para que estudantes possam gerenciar e acompanhar tecnologias aprendidas, sendo possível adicionar e deletar tecnologias.
 
 ## Aplicações
 - [X] Listar todas as tecnologias do usuário logado;
