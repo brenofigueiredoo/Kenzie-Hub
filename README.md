@@ -12,13 +12,14 @@ Kenzie hub é um sistema para que estudantes possam gerenciar e acompanhar tecno
 
 ## Conceitos estudados
 
-- Styled-components;
-- React Toastify;
-- React Router Dom;
-- Axios;
-- Props através do estilo;
-- Typescript com react;
-- API Rest.
+- Styled-components
+- React Toastify
+- React Router Dom
+- Axios
+- Context
+- Props através do estilo
+- Typescript com react
+- API Rest
 
 ## Como acessar
 
